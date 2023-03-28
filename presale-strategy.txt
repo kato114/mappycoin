@@ -1,0 +1,14 @@
+Total Supply:     100,000,000 MAPPY
+Initial Supply:   27,000,000 MAPPY
+
+Presale: 12,000,000 MAPPY
+> Softcap: 500 BNB  Price: 0.0000833 BNB  Rate: 12,000  Sold: 6,000,000 MAPPY
+> Hardcap: 1000 BNB  Price: 0.0000833 BNB  Rate: 12,000  Sold: 12,000,000 MAPPY
+
+> Min Buy: 0.2 BNB    Max Buyer: 5,000
+> Max Buy: 3 BNB     Min Buyer: 334
+
+Liquidity: 5,000,000 MAPPY
+> LP Size: 450 BNB  Price: 0.000090 BNB  Rate: 11,111
+
+

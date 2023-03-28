@@ -1,0 +1,29 @@
+@import "../../../styles/variable.scss";
+
+.slider-button {
+  position: relative;
+  background-color: $black;
+  width: 40px;
+  height: 24px;
+  padding: 2px;
+  align-items: center;
+  background-color: $black;
+  transition: 0.3s;
+  cursor: pointer;
+
+  & > div {
+    background-color: $black;
+    width: 20px;
+    height: 20px;
+    transition: 0.3s;
+  }
+}
+
+.slider-button-active {
+  background-color: $green;
+  justify-content: flex-end;
+
+  & > div {
+    margin-left: 14px;
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../../styles/variable.scss";
+
+.faq-main-item {
+  height: min-content;
+  grid-template: auto / 1fr;
+  transition: 0.3s;
+
+  &-title {
+    padding: 16px;
+    align-items: center;
+    justify-content: space-between;
+    color: $gray;
+    cursor: pointer;
+
+    & > span {
+      font-weight: 600;
+    }
+
+    & > svg {
+      min-width: 18px;
+      height: auto;
+      height: intrinsic;
+    }
+  }
+
+  &-content {
+    width: 100%;
+    padding: 0 16px 16px;
+    color: $gray;
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+.faq-item-active {
+  color: $white;
+}

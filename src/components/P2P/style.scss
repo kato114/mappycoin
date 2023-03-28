@@ -1,0 +1,101 @@
+@import "../../styles/variable.scss";
+
+.p2p {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 221px);
+  padding-top: 88px;
+  align-items: center;
+
+  &-decoration {
+    &-navbar {
+      position: absolute;
+      width: 480px;
+      height: auto;
+      right: -180px;
+      top: -360px;
+      z-index: 0;
+    }
+
+    &-info {
+      position: absolute;
+      width: 160px;
+      height: auto;
+      left: -120px;
+      top: 16px;
+      z-index: 0;
+    }
+  }
+
+  &-wrapper {
+    & > div {
+      &:first-of-type {
+        padding: 48px 0;
+      }
+
+      &:last-of-type {
+        padding: 48px 0 128px;
+      }
+    }
+  }
+
+  &-title {
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & > h1 {
+      color: $white;
+    }
+
+    & > p {
+      color: $gray;
+      margin-top: 0;
+    }
+  }
+
+  &-categories {
+    grid-template: auto / 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 16px;
+
+    @media (max-width: 1200px) {
+      grid-template: auto / 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    @media (max-width: 1024px) {
+      grid-template: auto / 1fr 1fr 1fr 1fr;
+    }
+
+    @media (max-width: 768px) {
+      grid-template: auto / 1fr 1fr 1fr;
+    }
+
+    @media (max-width: 425px) {
+      grid-template: auto / 1fr 1fr;
+    }
+
+    &-card {
+      text-decoration: none;
+      align-items: center;
+      padding: 8px 8px 12px 8px;
+      cursor: pointer;
+
+      @media (max-width: 1024px) {
+        grid-template: auto / 1fr 1fr 1fr 1fr 1fr;
+      }
+
+      &-image {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      &-title {
+        margin-top: 12px;
+        color: $white;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+  }
+}

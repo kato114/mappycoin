@@ -1,0 +1,320 @@
+{
+  "contractName": "IReservoir",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "requestedTokens",
+          "type": "uint256"
+        }
+      ],
+      "name": "drip",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "sentTokens",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.12+commit.f00d7308\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"requestedTokens\",\"type\":\"uint256\"}],\"name\":\"drip\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"sentTokens\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface of Reservoir contract.\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/MappyFarm/interfaces/IReservoir.sol\":\"IReservoir\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/MappyFarm/interfaces/IReservoir.sol\":{\"keccak256\":\"0x584972cb72aaff4bfc73b10508a4ac9eda5b995bdcdbf2572b44d1540850d463\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e0c298432bcf97fabf40525abea54df58024504fb0d078a76874722e7a557e20\",\"dweb:/ipfs/QmXCpNbLPLkkhq65iuCMNMJ3D3dbr4m8Cs6xjzq6x2YWao\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity >=0.6.0;\r\n\r\n/**\r\n * @dev Interface of Reservoir contract.\r\n */\r\ninterface IReservoir {\r\n    function drip(uint256 requestedTokens)\r\n        external\r\n        returns (uint256 sentTokens);\r\n}",
+  "sourcePath": "F:\\Cory_Career\\Stan_M\\mappycoin-dashboard\\contracts\\MappyFarm\\interfaces\\IReservoir.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/MappyFarm/interfaces/IReservoir.sol",
+    "exportedSymbols": {
+      "IReservoir": [
+        5205
+      ]
+    },
+    "id": 5206,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5196,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:26"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IReservoir",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 5197,
+          "nodeType": "StructuredDocumentation",
+          "src": "63:50:26",
+          "text": " @dev Interface of Reservoir contract."
+        },
+        "fullyImplemented": false,
+        "id": 5205,
+        "linearizedBaseContracts": [
+          5205
+        ],
+        "name": "IReservoir",
+        "nameLocation": "125:10:26",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "58326b7a",
+            "id": 5204,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "drip",
+            "nameLocation": "152:4:26",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5200,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5199,
+                  "mutability": "mutable",
+                  "name": "requestedTokens",
+                  "nameLocation": "165:15:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5204,
+                  "src": "157:23:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5198,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "157:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "156:25:26"
+            },
+            "returnParameters": {
+              "id": 5203,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5202,
+                  "mutability": "mutable",
+                  "name": "sentTokens",
+                  "nameLocation": "226:10:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5204,
+                  "src": "218:18:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5201,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "218:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "217:20:26"
+            },
+            "scope": 5205,
+            "src": "143:95:26",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5206,
+        "src": "115:126:26",
+        "usedErrors": []
+      }
+    ],
+    "src": "35:206:26"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/MappyFarm/interfaces/IReservoir.sol",
+    "exportedSymbols": {
+      "IReservoir": [
+        5205
+      ]
+    },
+    "id": 5206,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5196,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:26"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IReservoir",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 5197,
+          "nodeType": "StructuredDocumentation",
+          "src": "63:50:26",
+          "text": " @dev Interface of Reservoir contract."
+        },
+        "fullyImplemented": false,
+        "id": 5205,
+        "linearizedBaseContracts": [
+          5205
+        ],
+        "name": "IReservoir",
+        "nameLocation": "125:10:26",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "58326b7a",
+            "id": 5204,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "drip",
+            "nameLocation": "152:4:26",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5200,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5199,
+                  "mutability": "mutable",
+                  "name": "requestedTokens",
+                  "nameLocation": "165:15:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5204,
+                  "src": "157:23:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5198,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "157:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "156:25:26"
+            },
+            "returnParameters": {
+              "id": 5203,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5202,
+                  "mutability": "mutable",
+                  "name": "sentTokens",
+                  "nameLocation": "226:10:26",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5204,
+                  "src": "218:18:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5201,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "218:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "217:20:26"
+            },
+            "scope": 5205,
+            "src": "143:95:26",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5206,
+        "src": "115:126:26",
+        "usedErrors": []
+      }
+    ],
+    "src": "35:206:26"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.12+commit.f00d7308.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-02-24T00:21:02.647Z",
+  "devdoc": {
+    "details": "Interface of Reservoir contract.",
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

@@ -1,0 +1,545 @@
+@import "../../styles/variable.scss";
+
+.exchange {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 221px);
+  padding-top: 88px;
+  align-items: center;
+
+  &-decoration {
+    &-navbar {
+      position: absolute;
+      width: 480px;
+      height: auto;
+      right: -180px;
+      top: -360px;
+      z-index: 0;
+    }
+
+    &-info {
+      position: absolute;
+      width: 160px;
+      height: auto;
+      left: -120px;
+      top: 16px;
+      z-index: 0;
+    }
+  }
+
+  &-wrapper {
+    position: relative;
+  }
+
+  &-main {
+    justify-content: center;
+    align-items: center;
+    padding: 48px 0 128px;
+
+    @media (max-width: 768px) {
+      padding: 48px 0;
+    }
+
+    &-selector {
+      position: relative;
+      grid-template: auto / 1fr 1fr;
+      grid-column-gap: 16px;
+
+      & > button {
+        border: none;
+        color: $gray;
+        font-size: 18px;
+        font-weight: 600;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      & > svg {
+        position: absolute;
+        z-index: 0;
+
+        &:first-of-type {
+          width: 120px;
+          height: 120px;
+          top: 0px;
+          right: -200px;
+
+          @media (max-width: 768px) {
+            right: -160px;
+          }
+        }
+
+        &:last-of-type {
+          width: 160px;
+          height: 160px;
+          top: 260px;
+          left: -240px;
+
+          @media (max-width: 768px) {
+            top: 320px;
+            left: -200px;
+          }
+        }
+      }
+    }
+
+    &-card {
+      margin-top: 32px;
+      padding: 24px;
+      width: 100%;
+      max-width: 480px;
+      align-items: center;
+      z-index: 1;
+
+      &-title {
+        position: relative;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 24px;
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        z-index: 1;
+        border-bottom: 2px solid rgba($color: $gray, $alpha: 0.15);
+
+        & > div {
+          & > h3 {
+            position: relative;
+            color: $white;
+            text-transform: capitalize;
+            margin: 8px 0;
+          }
+
+          & > span {
+            color: $gray;
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+
+        & > svg {
+          position: relative;
+          width: 24px;
+          height: 24px;
+          color: $gray;
+          cursor: pointer;
+          transition: 0.3s;
+
+          &:hover {
+            color: $green;
+          }
+        }
+      }
+
+      &-swapper {
+        position: relative;
+        width: 36px;
+        height: 36px;
+        align-items: center;
+        justify-content: center;
+        margin: -6px;
+        background-color: rgba($color: $black, $alpha: 1);
+        border-radius: 50%;
+        overflow: hidden;
+        z-index: 2;
+        cursor: pointer;
+
+        & > svg {
+          position: relative;
+          color: $gray;
+        }
+      }
+
+      &-cryptocurrency-input {
+        width: 100%;
+        grid-template: auto / 1fr 144px;
+        grid-row-gap: 8px;
+        padding: 8px;
+        background-color: rgba($color: $gray, $alpha: 0.15);
+
+        & > span {
+          color: $gray;
+          font-size: 12px;
+          font-weight: 600;
+
+          &:last-of-type {
+            justify-self: flex-end;
+            align-items: center;
+
+            & > span {
+              margin-left: 8px;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+
+              &:last-of-type {
+                transition: 0.3s;
+                cursor: pointer;
+
+                &:hover {
+                  color: $green;
+                }
+              }
+            }
+
+            & > svg {
+              margin-left: 8px;
+              animation: spin 1s linear 0s infinite;
+            }
+          }
+        }
+
+        & > input {
+          border: none;
+          width: 100%;
+          color: $white;
+          padding: 4px;
+          font-size: 16px;
+          background-color: transparent;
+        }
+
+        & > button {
+          border: none;
+          padding: 4px;
+          font-size: 16px;
+          font-weight: 600;
+          color: $gray;
+          background-color: transparent;
+          align-items: center;
+          justify-self: flex-end;
+          cursor: pointer;
+
+          & > svg {
+            width: 24px;
+            min-width: 24px;
+            height: auto;
+            height: intrinsic;
+            margin: 0 8px 0 0;
+
+            &:last-of-type {
+              width: 18px;
+              margin: 0 0 0 8px;
+            }
+          }
+        }
+
+        &-currency {
+          padding: 8px;
+          align-items: center;
+          column-gap: 18px;
+          font-weight: 600;
+          cursor: pointer;
+
+          & > svg {
+            width: 36px;
+            height: auto;
+            height: intrinsic;
+          }
+
+          &:hover {
+            background-color: rgba($color: $gray, $alpha: 0.15);
+          }
+
+          &-info {
+            width: 100%;
+
+            & > span {
+              &:first-child {
+                color: $gray;
+                font-size: 14px;
+              }
+
+              &:last-child {
+                color: rgba($color: $gray, $alpha: 0.5);
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+
+      &-price {
+        width: 100%;
+        margin: 16px 0 8px;
+        align-items: center;
+        justify-content: space-between;
+
+        & > p {
+          margin: 0;
+          color: $gray;
+          font-size: 12px;
+          font-weight: bold;
+
+          & > span {
+            color: $white;
+
+            & > span {
+              color: $green;
+            }
+          }
+        }
+
+        & > svg {
+          color: $gray;
+          width: 16px;
+          height: auto;
+          height: intrinsic;
+          transition: 0.3s;
+          cursor: pointer;
+
+          &:hover {
+            color: $green;
+          }
+        }
+      }
+
+      &-button {
+        width: 100%;
+
+        & > button {
+          width: 100%;
+          position: relative;
+          margin-top: 24px;
+          color: $white;
+          text-decoration: none;
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-size: 14px;
+          font-weight: 600;
+          align-items: center;
+          text-align: center;
+          cursor: pointer;
+          border: none;
+          background-image: linear-gradient(135deg, $green, $blue);
+          box-shadow: inset 0 0 4px rgba($color: $green, $alpha: 0.4),
+            0 4px 8px rgba($color: $green, $alpha: 0.2);
+          transition: 0.3s;
+
+          &:hover {
+            box-shadow: inset 0 0 4px rgba($color: $green, $alpha: 0.4),
+              0 4px 16px rgba($color: $green, $alpha: 0.2);
+          }
+
+          &:active {
+            box-shadow: inset 0 0 4px rgba($color: $green, $alpha: 0.4),
+              0 4px 8px rgba($color: $green, $alpha: 0.2);
+          }
+        }
+      }
+
+      // Liquidity
+      &-info {
+        width: 100%;
+        border-bottom: 2px solid rgba($color: $gray, $alpha: 0.15);
+
+        & > h4 {
+          color: $gray;
+          margin: 0 0 16px;
+        }
+      }
+
+      & > h4 {
+        color: $white;
+        margin: 16px 0 8px;
+
+        &:last-of-type {
+          color: $gray;
+          margin: 8px 0;
+        }
+      }
+
+      &-liquidity-buttons {
+        margin-top: 24px;
+
+        @media (max-width: 768px) {
+          flex-direction: column !important;
+
+          & > button {
+            width: 100%;
+
+            &:not(:last-child) {
+              margin-bottom: 16px;
+            }
+          }
+        }
+
+        & > button {
+          color: $white;
+          white-space: nowrap;
+          border: none;
+          padding: 12px 20px;
+          border-radius: 8px;
+          font-size: 14px;
+          font-weight: 600;
+          align-items: center;
+          text-align: center;
+          cursor: pointer;
+          box-shadow: inset 0 0 4px rgba($color: $green, $alpha: 0.4),
+            0 4px 8px rgba($color: $green, $alpha: 0.2);
+          transition: 0.3s;
+
+          &:hover {
+            box-shadow: inset 0 0 4px rgba($color: $green, $alpha: 0.4),
+              0 4px 16px rgba($color: $green, $alpha: 0.2);
+          }
+
+          &:active {
+            box-shadow: inset 0 0 4px rgba($color: $green, $alpha: 0.4),
+              0 4px 8px rgba($color: $green, $alpha: 0.2);
+          }
+
+          &:first-of-type {
+            background-color: rgba($color: $green, $alpha: 0.01);
+            margin-right: 24px;
+          }
+
+          &:last-of-type {
+            background-image: linear-gradient(135deg, $green, $blue);
+          }
+        }
+      }
+    }
+
+    &-detail {
+      width: 90%;
+      max-width: 420px;
+      padding: 12px;
+      margin-top: 16px;
+
+      & > p {
+        justify-content: space-between;
+        font-size: 12px;
+        font-weight: bold;
+        margin: 2px 0;
+
+        & > span {
+          color: rgba($color: $gray, $alpha: 0.75);
+
+          &:last-of-type {
+            color: rgba($color: $green, $alpha: 0.75);
+          }
+        }
+      }
+    }
+  }
+
+  &-gasfee {
+    width: 100%;
+    grid-template: auto / 1fr 1fr 1fr;
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+
+    & > button {
+      text-align: center;
+      width: 100%;
+      padding: 6px 0;
+      color: $white;
+      background-color: $black;
+      font-size: 16px;
+      cursor: pointer;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &-slippages {
+    width: 100%;
+    grid-template: auto / 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+
+    & > button {
+      text-align: center;
+      width: 100%;
+      padding: 6px 0;
+      color: $white;
+      background-color: $black;
+      font-size: 16px;
+      cursor: pointer;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+
+      &:nth-child(6) {
+        width: 100%;
+        padding: 3px 0;
+        align-items: center;
+        justify-content: center;
+        grid-column-start: 3;
+        grid-column-end: 6;
+        align-items: flex-end;
+      }
+    }
+
+    & > div {
+      width: 100%;
+      grid-column-start: 3;
+      grid-column-end: 6;
+      align-items: flex-end;
+
+      & > div {
+        width: 100%;
+        color: $white;
+        background-color: $black;
+        align-items: center;
+        justify-content: center;
+        padding: 3px 0;
+        font-size: 16px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        cursor: pointer;
+
+        & > input {
+          width: 36px;
+          font-size: 16px;
+          color: $white;
+          text-align: center;
+          border: none;
+          background-color: transparent;
+        }
+      }
+
+      & > span {
+        font-size: 12px;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &-active {
+    color: $white !important;
+  }
+}
+
+.gasfee-active {
+  background-color: $green !important;
+  border-color: $green-dark;
+}
+
+.slippage-active {
+  background-color: $green !important;
+  border-color: $green-dark;
+}
+
+.slippage-warning {
+  background-color: $orange !important;
+  border-color: $green-dark;
+}
+
+.slippage-danger {
+  background-color: $red !important;
+  border-color: $green-dark;
+}
+
+.slippage-alert {
+  &-danger {
+    color: $red;
+  }
+
+  &-warning {
+    color: $orange;
+  }
+}

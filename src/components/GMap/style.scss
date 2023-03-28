@@ -1,0 +1,46 @@
+@import "../../styles/variable.scss";
+
+.gmap {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 221px);
+  padding-top: 88px;
+  align-items: center;
+
+  &-decoration {
+    &-navbar {
+      position: absolute;
+      width: 480px;
+      height: auto;
+      right: -180px;
+      top: -360px;
+      z-index: 0;
+    }
+
+    &-info {
+      position: absolute;
+      width: 160px;
+      height: auto;
+      left: -120px;
+      top: 16px;
+      z-index: 0;
+    }
+  }
+
+  &-wrapper {
+    & > div {
+      padding: 48px 0 128px;
+    }
+  }
+
+  &-mapbox {
+    & > h1 {
+      color: $white;
+      text-align: center;
+    }
+
+    &-wrapper {
+      padding: 24px;
+    }
+  }
+}

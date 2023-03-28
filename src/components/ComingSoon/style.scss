@@ -1,0 +1,95 @@
+@import "../../styles/variable.scss";
+
+.comingsoon {
+  width: 100%;
+  min-height: calc(100vh - 221px);
+  justify-content: center;
+
+  &-decoration {
+    &-navbar {
+      position: absolute;
+      width: 480px;
+      height: auto;
+      right: -180px;
+      top: -360px;
+      z-index: 0;
+    }
+
+    &-wrapper {
+      position: absolute;
+      width: 140px;
+      height: auto;
+      left: 40px;
+      top: 16px;
+      z-index: 0;
+
+      @media (max-width: 768px) {
+        width: 96px;
+        left: 0px;
+      }
+    }
+
+    &-small {
+      position: absolute;
+      width: 60px;
+      height: auto;
+      right: 24px;
+      top: -24px;
+      z-index: 0;
+
+      @media (max-width: 768px) {
+        right: 0px;
+      }
+    }
+  }
+
+  &-wrapper {
+    justify-content: center;
+    align-items: center;
+
+    & > div {
+      & > h1 {
+        position: relative;
+        z-index: 1;
+
+        & > span {
+          position: relative;
+          color: rgba($color: $gray, $alpha: 0.6);
+          text-decoration: solid 1px rgba($color: $black, $alpha: 1);
+          font-size: 96px;
+          text-align: center;
+          text-transform: uppercase;
+          text-shadow: 0.5px -0.5px 0px rgba($color: $gray, $alpha: 0.6);
+          z-index: 1;
+
+          @media (max-width: 1024px) {
+            font-size: 64px;
+          }
+
+          @media (max-width: 768px) {
+            font-size: 32px;
+          }
+        }
+      }
+
+      & > p {
+        position: relative;
+        font-size: 18px;
+        text-align: center;
+        color: $white;
+        z-index: 1;
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+
+      & > a {
+        color: $green;
+        font-size: 16px;
+        text-align: center;
+        z-index: 1;
+      }
+    }
+  }
+}

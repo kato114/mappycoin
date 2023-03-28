@@ -1,0 +1,138 @@
+@import "../../../styles/variable.scss";
+
+.order-card {
+  width: 100%;
+  padding: 12px;
+  grid-template: auto / 20% 1fr 180px 118.11px;
+  grid-column-gap: 16px;
+
+  @media (max-width: 768px) {
+    grid-template: auto / 1fr;
+    grid-row-gap: 12px;
+  }
+
+  & > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &-info {
+    width: 100%;
+
+    & > h3 {
+      color: $white;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    & > p {
+      color: $gray;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    & > a {
+      color: $gray;
+      font-size: 14px;
+      transition: 0.3s;
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+
+  &-payment {
+    width: 100%;
+    justify-content: space-between;
+
+    &-info {
+      & > h3 {
+        color: $white;
+        margin: 0 0 2px 0;
+        font-weight: 600;
+      }
+
+      & > span {
+        color: $gray;
+        font-size: 14px;
+        font-weight: 500;
+        align-items: center;
+
+        & > svg {
+          width: 18px;
+          height: auto;
+          height: intrinsic;
+          margin: 0 4px;
+        }
+      }
+    }
+
+    & > div {
+      margin: 4px 0;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    &-card {
+      color: $gray;
+      align-items: center;
+
+      & > svg {
+        width: 24px;
+        height: auto;
+        height: intrinsic;
+        padding: 3px;
+        border-radius: 50%;
+        background-color: rgba($color: $gray, $alpha: 0.2);
+        margin-right: 8px;
+      }
+    }
+
+    &-trust {
+      color: $gray;
+      align-items: center;
+
+      & > svg {
+        width: 24px;
+        height: auto;
+        height: intrinsic;
+        padding: 3px;
+        border-radius: 50%;
+        background-color: rgba($color: $gray, $alpha: 0.2);
+        margin-right: 8px;
+      }
+    }
+
+    &-est {
+      color: $green;
+    }
+  }
+
+  &-button {
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    @media (max-width: 768px) {
+      justify-content: flex-end;
+    }
+
+    & > button {
+      color: $gray;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      align-items: center;
+      text-align: center;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: 0.3s;
+      color: $white;
+      box-shadow: inset 0 0 4px rgba($color: $green, $alpha: 0.4),
+        0 4px 8px rgba($color: $green, $alpha: 0.2);
+      background-color: rgba($color: $green, $alpha: 0.01);
+    }
+  }
+}

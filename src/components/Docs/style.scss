@@ -1,0 +1,152 @@
+@import "../../styles/variable.scss";
+
+.docs {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 221px);
+  padding-top: 88px;
+  align-items: center;
+
+  &-decoration {
+    &-navbar {
+      position: absolute;
+      width: 480px;
+      height: auto;
+      right: -180px;
+      top: -360px;
+      z-index: 0;
+    }
+
+    &-info {
+      position: absolute;
+      width: 160px;
+      height: auto;
+      left: -120px;
+      top: 16px;
+      z-index: 0;
+    }
+  }
+
+  &-wrapper {
+    position: relative;
+  }
+
+  &-content {
+    padding: 24px 0 128px;
+    width: 100%;
+    grid-template: auto / 60% 40%;
+    grid-column-gap: 64px;
+    display: flex;
+
+    @media (max-width: 768px) {
+      grid-template: auto / 1fr;
+      padding: 24px 0 64px;
+      display: flex;
+      flex-flow: column-reverse;
+      align-items: center;
+    }
+
+    &-info {
+      position: relative;
+      width: 80%;
+      justify-self: flex-end;
+      justify-content: center;
+      margin-right: 2rem;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        align-items: center;
+        text-align: center;
+        margin-right: 0rem;
+      }
+      & > img {
+        border-radius: 30px;
+        width: 100%;
+        margin: 0 0 32px;
+        @media (min-width: 1024px) {
+          border-radius: 44px;
+        }
+      }
+      & > h1 {
+        color: $white;
+        font-weight: 900;
+        line-height: 48px;
+        z-index: 1;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 36px;
+
+        @media (max-width: 768px) {
+          font-size: 32px;
+          line-height: 32px;
+        }
+      }
+
+      & > p {
+        color: $gray;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0 0 32px;
+        z-index: 1;
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &-tabs {
+      width: 350px;
+      min-width: 220px;
+      height: min-content;
+      left: 925px;
+      top: 156px;
+      border-radius: 12px;
+      padding: 40px;
+
+      &-tab {
+        position: relative;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 32px;
+        padding: 0 0 0 12px;
+        color: $white;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+        white-space: nowrap;
+
+        &-highlight {
+          position: absolute;
+          width: 3px;
+          height: 100%;
+          background-color: rgba($color: $gray, $alpha: 0.5);
+          left: 0;
+        }
+      }
+
+      &-tab:hover {
+        cursor: pointer;
+        background-color: rgba($color: $green, $alpha: 0.2);
+        background-blend-mode: lighten;
+        color: $green;
+      }
+    }
+  }
+}
+
+.selected {
+  font-size: 15px;
+  font-weight: 500;
+  color: $green;
+}
+
+.highlight-selected {
+  width: 4px;
+  background-color: rgba($color: $green, $alpha: 1);
+  border-radius: 0 3px 3px 0;
+}

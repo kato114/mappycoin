@@ -1,0 +1,509 @@
+{
+  "contractName": "IMappyTreasury",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "isAllowedGathering",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "gather",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.12+commit.f00d7308\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"gather\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"isAllowedGathering\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface of MappyTreasury contract.\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/MappyFarm/interfaces/IMappyTreasury.sol\":\"IMappyTreasury\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/MappyFarm/interfaces/IMappyTreasury.sol\":{\"keccak256\":\"0x3ee2d29fbd87392ed905bda003c5ee9eacb02ae6044d5fbc2cbfa71e3a9b1227\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a166bd441a39f642fec00b55f91d510c5b973db83ec458e37afcc716d910ad2d\",\"dweb:/ipfs/QmYJg14jBQW44SxKxTJbEqov8jUcLYecMYxH1665NTZaLy\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity >=0.6.0;\r\n\r\n/**\r\n * @dev Interface of MappyTreasury contract.\r\n */\r\ninterface IMappyTreasury {\r\n    function isAllowedGathering(address) external returns (bool);\r\n\r\n    function gather(address) external returns (uint256);\r\n}",
+  "sourcePath": "F:\\Cory_Career\\Stan_M\\mappycoin-dashboard\\contracts\\MappyFarm\\interfaces\\IMappyTreasury.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/MappyFarm/interfaces/IMappyTreasury.sol",
+    "exportedSymbols": {
+      "IMappyTreasury": [
+        5194
+      ]
+    },
+    "id": 5195,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5178,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:25"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMappyTreasury",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 5179,
+          "nodeType": "StructuredDocumentation",
+          "src": "63:54:25",
+          "text": " @dev Interface of MappyTreasury contract."
+        },
+        "fullyImplemented": false,
+        "id": 5194,
+        "linearizedBaseContracts": [
+          5194
+        ],
+        "name": "IMappyTreasury",
+        "nameLocation": "129:14:25",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "ea4c7f91",
+            "id": 5186,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAllowedGathering",
+            "nameLocation": "160:18:25",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5182,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5181,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5186,
+                  "src": "179:7:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5180,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "179:7:25",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "178:9:25"
+            },
+            "returnParameters": {
+              "id": 5185,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5184,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5186,
+                  "src": "206:4:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5183,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "206:4:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "205:6:25"
+            },
+            "scope": 5194,
+            "src": "151:61:25",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "9da37e57",
+            "id": 5193,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "gather",
+            "nameLocation": "229:6:25",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5189,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5188,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5193,
+                  "src": "236:7:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5187,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "236:7:25",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "235:9:25"
+            },
+            "returnParameters": {
+              "id": 5192,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5191,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5193,
+                  "src": "263:7:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5190,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "263:7:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "262:9:25"
+            },
+            "scope": 5194,
+            "src": "220:52:25",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5195,
+        "src": "119:156:25",
+        "usedErrors": []
+      }
+    ],
+    "src": "35:240:25"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/MappyFarm/interfaces/IMappyTreasury.sol",
+    "exportedSymbols": {
+      "IMappyTreasury": [
+        5194
+      ]
+    },
+    "id": 5195,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5178,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:25"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMappyTreasury",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 5179,
+          "nodeType": "StructuredDocumentation",
+          "src": "63:54:25",
+          "text": " @dev Interface of MappyTreasury contract."
+        },
+        "fullyImplemented": false,
+        "id": 5194,
+        "linearizedBaseContracts": [
+          5194
+        ],
+        "name": "IMappyTreasury",
+        "nameLocation": "129:14:25",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "ea4c7f91",
+            "id": 5186,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAllowedGathering",
+            "nameLocation": "160:18:25",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5182,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5181,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5186,
+                  "src": "179:7:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5180,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "179:7:25",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "178:9:25"
+            },
+            "returnParameters": {
+              "id": 5185,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5184,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5186,
+                  "src": "206:4:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5183,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "206:4:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "205:6:25"
+            },
+            "scope": 5194,
+            "src": "151:61:25",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "9da37e57",
+            "id": 5193,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "gather",
+            "nameLocation": "229:6:25",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5189,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5188,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5193,
+                  "src": "236:7:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5187,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "236:7:25",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "235:9:25"
+            },
+            "returnParameters": {
+              "id": 5192,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5191,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5193,
+                  "src": "263:7:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5190,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "263:7:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "262:9:25"
+            },
+            "scope": 5194,
+            "src": "220:52:25",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5195,
+        "src": "119:156:25",
+        "usedErrors": []
+      }
+    ],
+    "src": "35:240:25"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.12+commit.f00d7308.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-02-24T00:21:02.646Z",
+  "devdoc": {
+    "details": "Interface of MappyTreasury contract.",
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
